@@ -1,0 +1,9 @@
+#host to ip 
+import socket
+from ipstack import GeoLookup
+hostname =str(input("Enter domain name : "))
+ip= socket.gethostbyname(hostname)
+print("Hostname:" ,hostname, "\n" "ip:" ,ip)
+geo_lookup = GeoLookup("b8d59bbb862c22c56fb2c4dd4141a53b")
+location = geo_lookup.get_location(hostname)
+print(location)
